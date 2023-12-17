@@ -81,7 +81,11 @@ const deleteFood = (req, res) => {
   });
 };
 
+const getPrint = (req, res) => {
+	res.status(200).send(`HELLO!`);
+};
+
 app.route('/food').get(getFood).post(newFood);
 app.route('/food/:id').get(getFoodById).put(updateFood).delete(deleteFood);
-
+app.route('/deneme').get(getPrint);
 module.exports = app;
